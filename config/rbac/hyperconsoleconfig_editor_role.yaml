@@ -1,0 +1,24 @@
+# permissions for end users to edit hyperconsoleconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hyperconsoleconfig-editor-role
+rules:
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - hyperconsoleconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - hyperconsoleconfigs/status
+  verbs:
+  - get

@@ -1,0 +1,20 @@
+# permissions for end users to view hyperconsoleconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hyperconsoleconfig-viewer-role
+rules:
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - hyperconsoleconfigs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - hyperconsoleconfigs/status
+  verbs:
+  - get

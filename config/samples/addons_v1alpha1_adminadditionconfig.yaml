@@ -1,0 +1,6 @@
+apiVersion: addons.dana.io/v1alpha1
+kind: AdminAdditionConfig
+metadata:
+  name: adminadditionconfig-sample
+spec:
+  # TODO(user): Add fields here

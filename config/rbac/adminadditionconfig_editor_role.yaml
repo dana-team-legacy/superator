@@ -1,0 +1,24 @@
+# permissions for end users to edit adminadditionconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: adminadditionconfig-editor-role
+rules:
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - adminadditionconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - addons.dana.io
+  resources:
+  - adminadditionconfigs/status
+  verbs:
+  - get

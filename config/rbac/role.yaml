@@ -1,0 +1,48 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - config.dana.io
+  resources:
+  - adminadditionconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - config.dana.io
+  resources:
+  - adminadditionconfigs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - config.dana.io
+  resources:
+  - hyperconsoleconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - config.dana.io
+  resources:
+  - hyperconsoleconfigs/status
+  verbs:
+  - get
+  - patch
+  - update

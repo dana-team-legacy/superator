@@ -1,0 +1,37 @@
+domain: dana.io
+layout:
+- go.kubebuilder.io/v3
+- declarative.go.kubebuilder.io/v1
+plugins:
+  declarative.go.kubebuilder.io/v1:
+    resources:
+    - domain: dana.io
+      group: addons
+      kind: HyperConsoleConfig
+      version: v1alpha1
+    - domain: dana.io
+      group: addons
+      kind: AdminAdditionConfig
+      version: v1alpha1
+projectName: metoperator
+repo: metoperator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dana.io
+  group: addons
+  kind: HyperConsoleConfig
+  path: metoperator/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dana.io
+  group: addons
+  kind: AdminAdditionConfig
+  path: metoperator/api/v1alpha1
+  version: v1alpha1
+version: "3"

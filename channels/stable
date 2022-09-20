@@ -1,0 +1,5 @@
+manifests:
+- name: adminadditionconfig
+  version: 0.1.0
+- name: hyperconsoleconfig
+  version: 0.1.0

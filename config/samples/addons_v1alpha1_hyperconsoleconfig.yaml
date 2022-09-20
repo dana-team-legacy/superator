@@ -1,0 +1,6 @@
+apiVersion: addons.dana.io/v1alpha1
+kind: HyperConsoleConfig
+metadata:
+  name: hyperconsoleconfig-sample
+spec:
+  # TODO(user): Add fields here
